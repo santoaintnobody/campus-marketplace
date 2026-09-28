@@ -28,3 +28,7 @@ backend/target/
 npm-debug.log*
 yarn-debug.log*
 lombok.jar
+
+# Java / Eclipse generated files
+backend/bin/
+backend/target/
