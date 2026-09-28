@@ -1,0 +1,250 @@
+/* ==========================================================================
+   Campus Marketplace — Create / Edit Listing Form Stylesheet (WOW Startup Tier)
+   ========================================================================== */
+
+.create-page {
+  padding: calc(var(--nav-height) + 24px) 0 64px;
+  min-height: calc(100vh - var(--nav-height));
+  background: var(--bg-main);
+}
+
+.create-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.create-eyebrow {
+  display: inline-block;
+  color: var(--coral);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+  background: rgba(255, 98, 79, 0.08);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.create-header h1 {
+  font-size: 2.25rem;
+  font-family: var(--font-heading);
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.create-subtitle {
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.create-form {
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  background: var(--bg-white);
+  padding: 32px 36px;
+}
+
+.form-section-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 24px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-section-title:first-of-type {
+  margin-top: 0;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.req {
+  color: var(--coral);
+  font-weight: 800;
+  margin-left: 2px;
+}
+
+.char-count {
+  display: block;
+  text-align: right;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 4px;
+  font-family: var(--font-mono);
+}
+
+.rupee-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.rupee-prefix {
+  position: absolute;
+  left: 16px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--navy);
+  pointer-events: none;
+}
+
+.price-num-input {
+  padding-left: 38px !important;
+  font-weight: 800 !important;
+  color: var(--coral) !important;
+  font-size: 1.125rem !important;
+  font-family: var(--font-heading);
+}
+
+/* ==========================================================================
+   Upload Dropzone
+   ========================================================================== */
+
+.upload-dropzone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-xl);
+  background: #f8fafc;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+}
+
+.upload-dropzone:hover {
+  border-color: var(--coral);
+  background: rgba(255, 98, 79, 0.03);
+  transform: translateY(-2px);
+}
+
+.file-input-hidden {
+  display: none;
+}
+
+.dropzone-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.dropzone-icon {
+  font-size: 2.5rem;
+  margin-bottom: 4px;
+  transition: transform var(--transition-fast);
+}
+
+.upload-dropzone:hover .dropzone-icon {
+  transform: scale(1.15) rotate(4deg);
+}
+
+.dropzone-text {
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 1rem;
+}
+
+.dropzone-hint {
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.previews-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.preview-thumb-box {
+  height: 96px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  background: #f1f5f9;
+}
+
+.preview-thumb-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-fast);
+}
+
+.preview-thumb-box:hover img {
+  transform: scale(1.06);
+}
+
+.remove-thumb-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 26px;
+  height: 26px;
+  background: rgba(17, 27, 60, 0.75);
+  backdrop-filter: blur(4px);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.remove-thumb-btn:hover {
+  background: var(--error);
+  transform: scale(1.1);
+}
+
+.create-actions-bar {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-light);
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .create-form {
+    padding: 24px 20px;
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .previews-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .create-actions-bar {
+    flex-direction: column-reverse;
+  }
+
+  .create-actions-bar button,
+  .create-actions-bar a {
+    width: 100%;
+    text-align: center;
+  }
+}

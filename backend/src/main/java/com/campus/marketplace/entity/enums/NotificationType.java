@@ -1,0 +1,19 @@
+package com.campus.marketplace.entity.enums;
+
+public enum NotificationType {
+    MESSAGE,
+    LISTING_APPROVED,
+    LISTING_REJECTED,
+    LISTING_REPORTED,
+    LISTING_SOLD,
+    LISTING_FAVORITED,
+    OFFER_RECEIVED,
+    OFFER_ACCEPTED,
+    OFFER_REJECTED,
+    OFFER_COUNTERED,
+    RATING_RECEIVED,
+    PASSWORD_RESET,
+    EMAIL_VERIFICATION,
+    USER_BLOCKED,
+    USER_UNBLOCKED
+}

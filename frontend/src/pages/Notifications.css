@@ -1,0 +1,145 @@
+/* ==========================================================================
+   Campus Marketplace — Notifications Center Stylesheet (WOW Startup Tier)
+   ========================================================================== */
+
+.notif-page {
+  padding: calc(var(--nav-height) + 24px) 0 64px;
+  min-height: calc(100vh - var(--nav-height));
+  background: var(--bg-main);
+}
+
+.notif-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notif-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--bg-white);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.notif-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(255, 98, 79, 0.25);
+}
+
+.notif-item.unread {
+  border-left: 4px solid var(--coral);
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(255, 98, 79, 0.08);
+}
+
+.notif-card-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 18px 24px;
+}
+
+.notif-icon-circle {
+  font-size: 1.625rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.notif-item.unread .notif-icon-circle {
+  background: rgba(255, 98, 79, 0.08);
+  border-color: rgba(255, 98, 79, 0.2);
+}
+
+.notif-text-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.notif-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.notif-title-row strong {
+  color: var(--navy);
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+.notif-time-ago {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  background: #f1f5f9;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.notif-msg-text {
+  font-size: 0.9375rem;
+  color: var(--ink-light);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.notif-action-link {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--coral);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all var(--transition-fast);
+}
+
+.notif-action-link:hover {
+  color: #e04836;
+  text-decoration: underline;
+  transform: translateX(2px);
+}
+
+.notif-pulse-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--coral);
+  box-shadow: 0 0 8px var(--coral);
+  margin-top: 6px;
+  flex-shrink: 0;
+  animation: pulse-badge 2s infinite;
+}
+
+@media (max-width: 600px) {
+  .notif-card-body {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+  
+  .notif-icon-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+  
+  .notif-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
